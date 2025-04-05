@@ -1,0 +1,46 @@
+
+<div>
+    <button routerLink="/dashboard">
+        <div class="back">
+        <img src="assets/icons/arrow-left.svg" alt="back arrow" width="20px"  />
+        Back to dashboard
+    </div>
+    </button>
+    <div class="header">
+        <div class="heading">
+    <h1>Subjects</h1>
+</div>
+    <div class="btn_div">
+    <button onclick="window.dialog.showModal();">+ Create new subject</button>
+
+</div>
+</div>
+</div>
+
+<dialog id="dialog"  >
+    <form (ngSubmit)="onSubmit()">
+    <div class="modalDiv">
+	<h3>Create Subject</h3>
+
+
+<div>
+<label for="subjectName">Name</label>
+    <input type="text" name="subjectName" [(ngModel)]="subjectName" />
+</div>
+<div>
+    <label for="subjectImage">Upload Image</label>
+    <input type="file" id="subjectImage" name="subjectImage" (change)="onFileChange($event)" >
+</div>
+
+<button type="submit" onclick="window.dialog.close();">Create Subject</button>
+</div>
+</form>
+</dialog>
+
+
+<div class="main">
+<div  *ngFor="let subject of subjects">
+    
+    <app-subject-card [subject]="subject"></app-subject-card>   
+</div>
+</div>

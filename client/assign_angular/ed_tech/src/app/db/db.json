@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "username": "mujtaba",
+      "password": "1234",
+      "id": "_l7Zj5S"
+    },
+    {
+      "username": "yolo",
+      "password": "12345",
+      "id": "ooqrAEp"
+    },
+    {
+      "username": "mujtaba",
+      "password": "1234",
+      "id": "sh7Rw0a"
+    },
+    {
+      "username": "test",
+      "password": "1234",
+      "id": "Ch2om7l"
+    },
+    {
+      "username": "test",
+      "password": "1234",
+      "id": "TNf60Lq"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "1",
+      "name": "Programming",
+      "lessons": [
+        {
+          "id": "1",
+          "name": "Programming Lesson 1",
+          "lessonUrl": "assets/videos/lesson.mp4"         
+        },
+        {
+          "id": "2",
+          "name": "Programming Lessons 2",
+          "lessonUrl": "assets/videos/lesson.mp4" 
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Networking",
+      "lessons": [
+        {
+          "id": "2",
+          "name": "Networking Lesson 1",
+          "lessonUrl": "assets/videos/lesson.mp4"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Database"
+    },
+    {
+      "id": "4",
+      "name": "Data structures"
+    }
+  ]
+}

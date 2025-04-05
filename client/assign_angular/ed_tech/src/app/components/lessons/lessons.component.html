@@ -1,0 +1,55 @@
+<div class="lessons">
+    <button routerLink="/subjects">
+        <div class="back">
+        <img src="assets/icons/arrow-left.svg" alt="back arrow" width="20px"  />
+        Back 
+    </div>
+    </button>
+
+    <div class="header">
+        <div class="heading">
+    <h1>Lessons</h1>
+</div>
+
+    <div class="btn_div">
+        <button class="createBtn" onclick="window.dialog.showModal();">+ Create new Lesson</button>
+    
+    </div>
+   </div> 
+
+    <dialog id="dialog"  >
+        <form (ngSubmit)="onSubmit()">
+        <div class="modalDiv">
+        <h3>Create Lesson</h3>
+    
+    
+    <div>
+    <label for="subjectName">Name</label>
+        <input type="text" name="subjectName" [(ngModel)]="lessonName" />
+    </div>
+    <div>
+        <label for="subjectImage">Upload Video</label>
+        <input type="file" id="lessonVideo" name="lessonVideo" (change)="onFileChange($event)" >
+    </div>
+    
+    <button type="submit" onclick="window.dialog.close();">Create Lesson</button>
+    </div>
+    </form>
+    </dialog>
+
+    <div  *ngIf="lessons ; then thenBlock else elseBlock"></div>
+    <ng-template  #thenBlock>
+        <div class="lessonsDisplay">
+    <div  *ngFor="let lesson of lessons">
+        <app-lesson-card [lesson]="lesson" ></app-lesson-card>
+    </div>
+</div>
+</ng-template>
+
+
+
+    <ng-template #elseBlock>
+        <h2>No lessons to display</h2>
+    </ng-template>
+
+</div>

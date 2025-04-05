@@ -1,0 +1,9 @@
+
+<div class="navbar">
+    <h1>{{ title }}</h1>
+    <ul *ngIf="auth" class="nav-links">
+      <li><a routerLink="/dashboard">Home</a></li>
+      <li><a routerLink="/subjects">Subjects</a></li>
+      <li (click)="onLogoutClick()"><a >Logout</a></li>
+    </ul>
+  </div>
